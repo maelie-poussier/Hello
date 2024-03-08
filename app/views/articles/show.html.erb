@@ -8,3 +8,9 @@
 
   <%= button_to "Destroy this article", @article, method: :delete %>
 </div>
+
+<% @article.photos.each do |photo|%>
+  <%= cl_image_tag photo.key, alt: "alttext", width: 200 %>
+<% end %>
+
+
